@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>My Family Book</title>
+    </head>
+
+    <body>
+      <center><h1> My family Book </h1>
+        <br>
+        <br>
+        <img id="imgrep" height="265px" width="200px" src="Family cover Page.jpg">
+        <br> 
+        <br>
+        <p id="p"> * Click 'next' to see the members of the family</p>
+        <button type="button" onclick="move()" onclick="text()"> Next </button></center>
+        
+        <script>
+            var img = [ 
+                "Hibba_.jpg",
+                "Karishma_Mamma.jpg",
+                "Faiyaz_Abbu.jpg",
+                "Sugar_cat.jpg",
+                "All_three.jpg"
+            ];
+
+            var names = [
+                "Hibba.Faiyaz.Shaikh",
+                "Karishma.Faiyaz.Shaikh",
+                "Faiyaz.Chiraguddin.Shaikh",
+                "Sugar.Faiyaz.Shaikh",
+                "The Three of us."
+            ];
+
+var i= 0;
+
+function move( )
+ {document.getElementById("imgrep").src = img[i];
+i++;              
+if( i == 4 )
+  {
+    i = 0 ; 
+  } 
+    }
+
+    
+ function text( )
+ {document.getElementById("p").innerHTML = names[i];
+i++;
+if( i == 4 ) 
+  {
+     i = 0 ;
+  }
+    }
+        </script>
+    </body>
+</html>
